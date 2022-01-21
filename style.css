@@ -1,0 +1,11 @@
+.img {
+  text-align: center;
+  padding: 10px 0;
+  -webkit-box-shadow: 1px 10px 10px ghostwhite;
+          box-shadow: 1px 10px 10px ghostwhite;
+}
+
+.img img {
+  width: 200px;
+}
+/*# sourceMappingURL=style.css.map */
