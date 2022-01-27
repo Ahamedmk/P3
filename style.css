@@ -41,24 +41,29 @@ header .img img {
 
 .ville input {
   border: transparent;
+  padding-top: 10px;
   padding-left: 10px;
   background-color: #eaeaea;
 }
 
 .ville input::-webkit-input-placeholder {
   color: black;
+  font-size: 1.1rem;
 }
 
 .ville input:-ms-input-placeholder {
   color: black;
+  font-size: 1.1rem;
 }
 
 .ville input::-ms-input-placeholder {
   color: black;
+  font-size: 1.1rem;
 }
 
 .ville input::placeholder {
   color: black;
+  font-size: 1.1rem;
 }
 
 .title {
@@ -73,6 +78,7 @@ header .img img {
 
 .title h2 {
   text-align: center;
+  font-weight: 300;
   font-size: 1.3rem;
   padding: 20px 0;
 }
@@ -80,6 +86,7 @@ header .img img {
 .title h3 {
   width: 15rem;
   border-radius: 30px;
+  font-weight: 400;
   color: white;
   font-size: 1rem;
   margin: 0 auto;
@@ -89,5 +96,17 @@ header .img img {
   background: linear-gradient(0deg, #ac7cf0 0%, #f172f7 97%);
   -webkit-box-shadow: 0px 6px 7px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 6px 7px 3px rgba(0, 0, 0, 0.2);
+}
+
+.fonctionnement {
+  background-color: #ffffff;
+}
+
+.fonctionnement h2 {
+  padding-top: 20px;
+}
+
+.wrapper {
+  padding: 0 20px;
 }
 /*# sourceMappingURL=style.css.map */
