@@ -67,8 +67,8 @@ header .img img {
 }
 
 .title {
-  background-color: #f1f0f1;
-  height: 270px;
+  background-color: #faf9f9;
+  height: 310px;
 }
 
 .title h1 {
@@ -103,10 +103,63 @@ header .img img {
 }
 
 .fonctionnement h2 {
-  padding-top: 20px;
+  padding: 40px 0 30px 0;
 }
 
 .wrapper {
   padding: 0 20px;
+}
+
+.selection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.selection_menu {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #faf9f9;
+  width: 100%;
+  border-radius: 20px;
+  padding: 25px 0;
+  margin-bottom: 25px;
+  -webkit-box-shadow: 0px 6px 7px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 6px 7px 3px rgba(0, 0, 0, 0.2);
+}
+
+.selection_menu::before {
+  content: "1";
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  background-color: #9356DC;
+  color: white;
+  left: -12px;
+  width: 25px;
+  height: 25px;
+}
+
+.selection_menu .icon_fonct {
+  font-size: 20px;
+  color: #97a8af;
+  margin: 0 30px 0 40px;
 }
 /*# sourceMappingURL=style.css.map */
