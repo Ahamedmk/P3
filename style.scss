@@ -142,11 +142,26 @@ header{
         border-radius: 10px 10px 10px 10px;
         margin-bottom: 60px;
             .img_rest{
+                position: relative;
                 width: 100%;
                 height: 193px;
                 object-fit: cover;
                 border-radius: 10px 10px 0 0;
             
+        }
+    }
+    .card_repas {
+        p { 
+          background-color: #99E2D0;       
+          position: absolute;
+          z-index: 10;
+          left: 264px;
+          font-size: 15px;
+        //   border: 1px solid;
+          margin-top: 14px;
+          color: #3a866f;
+          font-weight: 800;
+         padding: 5px 10px;
         }
     }
     .card_repas_name {
