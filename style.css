@@ -175,7 +175,7 @@ header .img img {
 .repas {
   background-color: white;
   border-radius: 10px 10px 10px 10px;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
 }
 
 .repas .img_rest {
@@ -201,5 +201,32 @@ header .img img {
 
 .title_rest {
   padding: 40px 0 20px 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.title_footer {
+  font-family: 'Shrikhand', cursive;
+  font-weight: lighter;
+  color: white;
+  padding: 20px 0;
+}
+
+.final {
+  background-color: #332e2c;
+  height: 200px;
+}
+
+.icon_footer {
+  font-size: 10px;
+  padding-right: 5px;
+}
+
+li {
+  padding-bottom: 5px;
+  list-style-type: none;
 }
 /*# sourceMappingURL=style.css.map */
