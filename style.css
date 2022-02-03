@@ -172,6 +172,10 @@ header .img img {
   content: "3";
 }
 
+.city_name {
+  font-size: 15px;
+}
+
 .repas {
   background-color: white;
   border-radius: 10px 10px 10px 10px;
@@ -209,7 +213,31 @@ header .img img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 25px;
   padding: 10px 5px;
+}
+
+.coeur {
+  position: relative;
+  right: 40px;
+  top: -18px;
+}
+
+.coeur .fas {
+  position: absolute;
+  z-index: -1;
+}
+
+.coeur .far {
+  position: absolute;
+}
+
+.coeur:hover .fas {
+  z-index: 0;
+}
+
+.coeur:hover .far {
+  z-index: -1;
 }
 
 .title_rest {

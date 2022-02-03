@@ -136,6 +136,10 @@ header{
         }
     }
 
+    .city_name {
+        font-size: 15px;
+    }
+
     .repas{
         // border: 1px solid red;
         background-color: white;
@@ -168,7 +172,33 @@ header{
         display: flex;
         justify-content: space-between;
         align-items: center;
+         font-size: 25px;
         padding:10px 5px;
+    }
+    .coeur{
+        position: relative;
+        right: 40px;
+        top:-18px;
+        
+         .fas{
+             position: absolute;
+             z-index: -1;
+            //  color: transparent;
+            //  background-clip: text;
+            //  background-image:linear-gradient(to right,purple, pink);
+             }
+         
+        .far{
+            position: absolute;
+        }
+        &:hover{
+            .fas{
+                z-index: 0;
+            }
+            .far{
+                z-index: -1;
+            }
+        }
     }
     .title_rest{
         padding: 40px 0 20px 0;
