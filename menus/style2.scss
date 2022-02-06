@@ -81,6 +81,9 @@ h2 {
 .entree{
     padding-bottom: 20px;
 }
+.euro {
+    font-weight: bold;
+}
 .tartare{
     display: flex;
     justify-content: space-evenly;
@@ -90,7 +93,13 @@ h2 {
     border-radius: 15px;
     -webkit-box-shadow: 0px 6px 7px 3px rgba(0,0,0,0.2); 
         box-shadow: 0px 6px 7px 3px rgba(0,0,0,0.2);
-    margin-bottom: 15px;    
+    margin-bottom: 15px; 
+    
+    &:hover {
+        .validate{
+            display: flex;
+        }
+    }   
 
 .tartare_poulpe{
     // border: 1px solid;
@@ -102,15 +111,20 @@ h2 {
     }
 }
 .validate{
-    display:flex;
+    display:none;
     text-align: center;
     align-items: center;
     color: #99E2D0;
     background:#99E2D0 ;
     border-radius: 0 15px 15px 0;
-    padding: 020px;
-
+    padding: 20px;
     border: 1px solid;
+    animation: 0.5s 0s 1 both validation  ;
+    //  transform-origin: right;
+    transform: scaleX(1);
+    // transition: transform 9000ms;
+    }
+    
     .check{
         display:flex;
         justify-content: center;
@@ -118,10 +132,82 @@ h2 {
         width: 30px;
         height: 30px;
         border-radius: 50%;
-        border: 1px solid;background: white;   
+        border: 1px solid;background: white; 
+        animation: 0.5s 0s 1 both turn  ;
+          
     }    
 }
+
+.entree_tartare{
+    animation: myAnim 1s ease 0s 1 normal both;
 }
+.entree_veloute{
+    animation: myAnim1 1s ease 0.1s 1 normal both;
+}
+.entree_soupe{
+    animation: myAnim2 1s ease 0.2s 1 normal both;
+}
+
+@keyframes turn {
+    0% { 
+        transform: rotate(0deg);
+        // transform: scaleX(1);
+    }
+
+    100% {
+        transform: rotate(720deg);
+    }
+}
+
+ @keyframes validation {
+     0% { transform-origin: right;
+         transform: scaleX(0);
+        
+    }
+    
+    100% { transform-origin: right;
+        // width: 100px;
+        transform: scaleX(1);
+        
+   }
+}
+
+@keyframes myAnim {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes myAnim1 {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes myAnim2 {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
 
 
 button {
@@ -166,8 +252,17 @@ li{
     padding-bottom: 5px;
     list-style-type:none;
 }
-h3{
+h3{   
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
     a{
         color: black;
     }
+}
+.accompagnement{
+    
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
