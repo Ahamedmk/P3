@@ -100,6 +100,8 @@ h2::after {
 
 .euro {
   font-weight: bold;
+  padding-right: 15px;
+  padding-top: 40px;
 }
 
 .tartare {
@@ -114,12 +116,15 @@ h2::after {
   -webkit-box-shadow: 0px 6px 7px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 6px 7px 3px rgba(0, 0, 0, 0.2);
   margin-bottom: 15px;
+  overflow: hidden;
 }
 
-.tartare:hover .validate {
+.tartare:hover .price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
 }
 
 .tartare .tartare_poulpe {
@@ -137,7 +142,9 @@ h2::after {
 }
 
 .tartare .validate {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -147,10 +154,6 @@ h2::after {
   border-radius: 0 15px 15px 0;
   padding: 20px;
   border: 1px solid;
-  -webkit-animation: 0.5s 0s 1 both validation;
-          animation: 0.5s 0s 1 both validation;
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
 }
 
 .tartare .check {
@@ -206,36 +209,6 @@ h2::after {
   100% {
     -webkit-transform: rotate(720deg);
             transform: rotate(720deg);
-  }
-}
-
-@-webkit-keyframes validation {
-  0% {
-    -webkit-transform-origin: right;
-            transform-origin: right;
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
-  100% {
-    -webkit-transform-origin: right;
-            transform-origin: right;
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-}
-
-@keyframes validation {
-  0% {
-    -webkit-transform-origin: right;
-            transform-origin: right;
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
-  100% {
-    -webkit-transform-origin: right;
-            transform-origin: right;
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
   }
 }
 
@@ -381,5 +354,17 @@ h3 a {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+}
+
+.price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translateX(77px);
+          transform: translateX(77px);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
 }
 /*# sourceMappingURL=style2.css.map */

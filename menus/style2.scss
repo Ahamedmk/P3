@@ -83,6 +83,8 @@ h2 {
 }
 .euro {
     font-weight: bold;
+    padding-right: 15px;
+    padding-top: 40px;
 }
 .tartare{
     display: flex;
@@ -94,10 +96,12 @@ h2 {
     -webkit-box-shadow: 0px 6px 7px 3px rgba(0,0,0,0.2); 
         box-shadow: 0px 6px 7px 3px rgba(0,0,0,0.2);
     margin-bottom: 15px; 
+    overflow: hidden;
     
     &:hover {
-        .validate{
+        .price{
             display: flex;
+            transform: translateX(0px);
         }
     }   
 
@@ -111,7 +115,10 @@ h2 {
     }
 }
 .validate{
-    display:none;
+    // position:absolute;
+    display:flex;
+    //  visibility: hidden;
+    // overflow: hidden;
     text-align: center;
     align-items: center;
     color: #99E2D0;
@@ -119,10 +126,8 @@ h2 {
     border-radius: 0 15px 15px 0;
     padding: 20px;
     border: 1px solid;
-    animation: 0.5s 0s 1 both validation  ;
-    //  transform-origin: right;
-    transform: scaleX(1);
-    // transition: transform 9000ms;
+    // animation: 0.5s 0s 1 both validation  ;
+     
     }
     
     .check{
@@ -159,18 +164,18 @@ h2 {
     }
 }
 
- @keyframes validation {
-     0% { transform-origin: right;
-         transform: scaleX(0);
+//   @keyframes validation {
+//      0% { transform-origin: right;
+//          transform: scaleX(0);
         
-    }
+//    }
     
-    100% { transform-origin: right;
-        // width: 100px;
-        transform: scaleX(1);
+//     100% { transform-origin: right;
+//         // width: 100px;
+//         transform: scaleX(1);
         
-   }
-}
+//    }
+// }
 
 @keyframes myAnim {
     0% {
@@ -265,4 +270,9 @@ h3{
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+}
+.price{
+    display: flex;
+    transform: translateX(77px);
+     transition: transform 1s;
 }
