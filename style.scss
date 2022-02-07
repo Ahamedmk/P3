@@ -128,6 +128,13 @@ header{
             margin: 0 30px 0 40px;
             // margin-left: 10px;
         }
+        &:hover {
+            // background-color: #9356DC;
+            background:lighten(#9356DC,35%);
+            .icon_fonct{
+                color: #9356DC;
+            }
+        }
     }
     .compo_menu{
         &::before{
@@ -158,6 +165,7 @@ header{
                 border-radius: 10px 10px 0 0;
             
         }
+        
     }
     .card_repas {
         position: relative;
@@ -201,10 +209,21 @@ header{
         &:hover{
             .fas{
                 z-index: 0;
+                animation: 0.5s 0s both mk;
             }
             .far{
                 z-index: -1;
             }
+        }
+    }
+
+    @keyframes mk {
+        0% {
+            transform: scale(0);
+        }
+
+        100% {
+            transform: scale(1);
         }
     }
     .title_rest{

@@ -172,6 +172,14 @@ header .img img {
   margin: 0 30px 0 40px;
 }
 
+.selection_menu:hover {
+  background: #f2eafb;
+}
+
+.selection_menu:hover .icon_fonct {
+  color: #9356DC;
+}
+
 .compo_menu::before {
   content: "2";
 }
@@ -244,10 +252,34 @@ header .img img {
 
 .coeur:hover .fas {
   z-index: 0;
+  -webkit-animation: 0.5s 0s both mk;
+          animation: 0.5s 0s both mk;
 }
 
 .coeur:hover .far {
   z-index: -1;
+}
+
+@-webkit-keyframes mk {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes mk {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 .title_rest {
