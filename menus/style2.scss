@@ -99,6 +99,7 @@ h2 {
     overflow: hidden;
     
     &:hover {
+        cursor: pointer;
         .price{
             display: flex;
             transform: translateX(0px);

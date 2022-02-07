@@ -119,6 +119,10 @@ h2::after {
   overflow: hidden;
 }
 
+.tartare:hover {
+  cursor: pointer;
+}
+
 .tartare:hover .price {
   display: -webkit-box;
   display: -ms-flexbox;
