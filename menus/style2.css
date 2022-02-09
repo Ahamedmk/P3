@@ -20,9 +20,6 @@ header .img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -33,8 +30,20 @@ header .img img {
   width: 200px;
 }
 
-header .img .fas {
-  padding-right: 90px;
+.myfood {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.lien_title {
+  color: black;
 }
 
 .wrapper {
@@ -43,6 +52,7 @@ header .img .fas {
 
 .plat_deux {
   width: 100%;
+  height: 150px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -176,19 +186,9 @@ h2::after {
   background: white;
 }
 
-.entree_tartare {
+.anim-1 {
   -webkit-animation: myAnim 1s ease 0s 1 normal both;
           animation: myAnim 1s ease 0s 1 normal both;
-}
-
-.entree_veloute {
-  -webkit-animation: myAnim1 1s ease 0.1s 1 normal both;
-          animation: myAnim1 1s ease 0.1s 1 normal both;
-}
-
-.entree_soupe {
-  -webkit-animation: myAnim2 1s ease 0.2s 1 normal both;
-          animation: myAnim2 1s ease 0.2s 1 normal both;
 }
 
 @-webkit-keyframes turn {
@@ -291,6 +291,162 @@ h2::after {
   }
 }
 
+@-webkit-keyframes myAnim3 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes myAnim3 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes myAnim4 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes myAnim4 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes myAnim5 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes myAnim5 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes myAnim6 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes myAnim6 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes myAnim7 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes myAnim7 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes myAnim8 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes myAnim8 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -367,5 +523,55 @@ h3 a {
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.anim-1 {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.anim-2 {
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+
+.anim-3 {
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
+}
+
+.anim-4 {
+  -webkit-animation-delay: 3.2s;
+          animation-delay: 3.2s;
+}
+
+.anim-5 {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
+.anim-6 {
+  -webkit-animation-delay: 4.8s;
+          animation-delay: 4.8s;
+}
+
+.anim-7 {
+  -webkit-animation-delay: 5.6s;
+          animation-delay: 5.6s;
+}
+
+.anim-8 {
+  -webkit-animation-delay: 6.4s;
+          animation-delay: 6.4s;
+}
+
+.anim-9 {
+  -webkit-animation-delay: 7.2s;
+          animation-delay: 7.2s;
+}
+
+.anim-10 {
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
 }
 /*# sourceMappingURL=style2.css.map */

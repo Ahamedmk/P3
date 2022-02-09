@@ -14,7 +14,7 @@ header{
     background-color: #ffffff;
 .img {
     display: flex;
-     justify-content: center;
+    //  justify-content: center;
     align-items: center;
     // text-align: center;
     // border-bottom: 1px solid black;
@@ -23,10 +23,19 @@ header{
     img {
         width: 200px;
     }
-    .fas {
-        padding-right: 90px;
-    }
+    // .fas {
+    //     padding-right: 90px;
+    // }
 }
+}
+.myfood {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+
+}
+.lien_title{
+    color: black;
 }
 .wrapper {
     padding: 0 20px;
@@ -34,6 +43,7 @@ header{
 
 .plat_deux{
     width: 100%;
+    height: 150px;
     object-fit: cover;
 }
 #final{
@@ -151,15 +161,35 @@ h2 {
     }    
 }
 
-.entree_tartare{
-    animation: myAnim 1s ease 0s 1 normal both;
-}
-.entree_veloute{
-    animation: myAnim1 1s ease 0.1s 1 normal both;
-}
-.entree_soupe{
-    animation: myAnim2 1s ease 0.2s 1 normal both;
-}
+.anim-1{
+   animation: myAnim 1s ease 0s 1 normal both;
+ }
+// .entree_veloute{
+//     animation: myAnim1 1s ease 0.1s 1 normal both;
+// }
+// .entree_soupe{
+//     animation: myAnim2 1s ease 0.2s 1 normal both;
+// }
+
+// .plat_coquille{
+//     animation: myAnim3 1s ease 0.3s 1 normal both;
+// }
+// .plat_magret{
+//     animation: myAnim4 1s ease 0.4s 1 normal both;
+// }
+// .plat_pigeonneau{
+//     animation: myAnim5 1s ease 0.5s 1 normal both;
+// }
+
+// .dessert_petale{
+//     animation: myAnim6 1s ease 0.6s 1 normal both;
+// }
+// .dessert_fondant{
+//     animation: myAnim7 1s ease 0.7s 1 normal both;
+// }
+// .dessert_millefeuille{
+//     animation: myAnim8 1s ease 0.8s 1 normal both;
+// }
 
 @keyframes turn {
     0% { 
@@ -171,19 +201,6 @@ h2 {
         transform: rotate(720deg);
     }
 }
-
-//   @keyframes validation {
-//      0% { transform-origin: right;
-//          transform: scaleX(0);
-        
-//    }
-    
-//     100% { transform-origin: right;
-//         // width: 100px;
-//         transform: scaleX(1);
-        
-//    }
-// }
 
 @keyframes myAnim {
     0% {
@@ -220,6 +237,80 @@ h2 {
       transform: translateY(0);
     }
   }
+
+  @keyframes myAnim3 {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes myAnim4 {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes myAnim5 {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes myAnim6 {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes myAnim7 {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes myAnim8 {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
 
 
 
@@ -283,4 +374,12 @@ h3{
     display: flex;
     transform: translateX(77px);
      transition: transform 0.5s;
+}
+
+$vardelay:0.8s;
+
+@for $i from 1 through 10 {
+  .anim-#{$i} {
+      animation-delay: $vardelay*$i;
+  }
 }
