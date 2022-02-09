@@ -214,6 +214,10 @@ header .img img {
   border-radius: 10px 10px 0 0;
 }
 
+.repas a {
+  color: black;
+}
+
 .card_repas {
   position: relative;
 }
@@ -254,7 +258,7 @@ header .img img {
 .coeur .fas {
   position: absolute;
   z-index: -1;
-  background: -webkit-linear-gradient(0deg, #ac7cf0 0%, #f172f7 50%);
+  background: -webkit-linear-gradient(-90deg, #ac7cf0 0%, #f172f7 80%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

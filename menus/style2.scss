@@ -41,6 +41,7 @@ header{
     padding: 0 20px;
 }
 
+
 .plat_deux{
     width: 100%;
     height: 150px;
@@ -68,6 +69,12 @@ header{
     .far{
         font-size: 25px;
         padding: 20px;
+        &:hover{
+          background: -webkit-linear-gradient(-90deg, rgba(172,124,240,1) 0%, rgba(241,114,247,1) 80%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          color:linear-gradient(-90deg, rgba(172,124,240,1) 0%, rgba(241,114,247,1) 80%); 
+        }
     }
 
 }
@@ -161,9 +168,9 @@ h2 {
     }    
 }
 
-.anim-1{
-   animation: myAnim 1s ease 0s 1 normal both;
- }
+// .anim-1{
+//    animation: myAnim 1s ease 0s 1 normal both;
+//  }
 // .entree_veloute{
 //     animation: myAnim1 1s ease 0.1s 1 normal both;
 // }
@@ -214,101 +221,101 @@ h2 {
     }
   }
 
-  @keyframes myAnim1 {
-    0% {
-      opacity: 0;
-      transform: translateY(30px);
-    }
+  // @keyframes myAnim1 {
+  //   0% {
+  //     opacity: 0;
+  //     transform: translateY(30px);
+  //   }
   
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+  //   100% {
+  //     opacity: 1;
+  //     transform: translateY(0);
+  //   }
+  // }
 
-  @keyframes myAnim2 {
-    0% {
-      opacity: 0;
-      transform: translateY(30px);
-    }
+  // @keyframes myAnim2 {
+  //   0% {
+  //     opacity: 0;
+  //     transform: translateY(30px);
+  //   }
   
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+  //   100% {
+  //     opacity: 1;
+  //     transform: translateY(0);
+  //   }
+  // }
 
-  @keyframes myAnim3 {
-    0% {
-      opacity: 0;
-      transform: translateY(30px);
-    }
+  // @keyframes myAnim3 {
+  //   0% {
+  //     opacity: 0;
+  //     transform: translateY(30px);
+  //   }
   
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+  //   100% {
+  //     opacity: 1;
+  //     transform: translateY(0);
+  //   }
+  // }
 
-  @keyframes myAnim4 {
-    0% {
-      opacity: 0;
-      transform: translateY(30px);
-    }
+  // @keyframes myAnim4 {
+  //   0% {
+  //     opacity: 0;
+  //     transform: translateY(30px);
+  //   }
   
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+  //   100% {
+  //     opacity: 1;
+  //     transform: translateY(0);
+  //   }
+  // }
 
-  @keyframes myAnim5 {
-    0% {
-      opacity: 0;
-      transform: translateY(30px);
-    }
+  // @keyframes myAnim5 {
+  //   0% {
+  //     opacity: 0;
+  //     transform: translateY(30px);
+  //   }
   
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+  //   100% {
+  //     opacity: 1;
+  //     transform: translateY(0);
+  //   }
+  // }
 
-  @keyframes myAnim6 {
-    0% {
-      opacity: 0;
-      transform: translateY(30px);
-    }
+  // @keyframes myAnim6 {
+  //   0% {
+  //     opacity: 0;
+  //     transform: translateY(30px);
+  //   }
   
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+  //   100% {
+  //     opacity: 1;
+  //     transform: translateY(0);
+  //   }
+  // }
 
-  @keyframes myAnim7 {
-    0% {
-      opacity: 0;
-      transform: translateY(30px);
-    }
+  // @keyframes myAnim7 {
+  //   0% {
+  //     opacity: 0;
+  //     transform: translateY(30px);
+  //   }
   
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+  //   100% {
+  //     opacity: 1;
+  //     transform: translateY(0);
+  //   }
+  // }
 
-  @keyframes myAnim8 {
-    0% {
-      opacity: 0;
-      transform: translateY(30px);
-    }
+  // @keyframes myAnim8 {
+  //   0% {
+  //     opacity: 0;
+  //     transform: translateY(30px);
+  //   }
   
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+  //   100% {
+  //     opacity: 1;
+  //     transform: translateY(0);
+  //   }
+  // }
 
 
 
@@ -376,10 +383,11 @@ h3{
      transition: transform 0.5s;
 }
 
-$vardelay:0.8s;
+$vardelay:0.4s;
 
 @for $i from 1 through 10 {
   .anim-#{$i} {
-      animation-delay: $vardelay*$i;
+      // animation-delay: $vardelay*$i;
+      animation: myAnim $vardelay*$i ease 0s 1 normal both;
   }
 }
