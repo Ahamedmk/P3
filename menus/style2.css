@@ -267,6 +267,7 @@ button {
 a {
   text-decoration: none;
   color: white;
+  cursor: pointer;
 }
 
 .title_footer {
