@@ -10,6 +10,87 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.container {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  background: #333;
+  -webkit-animation: 3s ease-out 0s 1 both point;
+          animation: 3s ease-out 0s 1 both point;
+}
+
+@-webkit-keyframes point {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.8;
+    visibility: hidden;
+  }
+}
+
+@keyframes point {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.8;
+    visibility: hidden;
+  }
+}
+
+.loader div {
+  width: 18px;
+  height: 18px;
+  background: whitesmoke;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-animation: troispoints 0.5s infinite ease-in-out alternate;
+          animation: troispoints 0.5s infinite ease-in-out alternate;
+}
+
+.loader .ball1 {
+  -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s;
+}
+
+.loader .ball2 {
+  -webkit-animation-delay: -0.15s;
+          animation-delay: -0.15s;
+}
+
+@-webkit-keyframes troispoints {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes troispoints {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 header {
   -webkit-box-shadow: 0px 4px 6px 1px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 4px 6px 1px rgba(0, 0, 0, 0.25);
