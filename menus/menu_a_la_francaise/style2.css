@@ -52,10 +52,17 @@ header .img img {
 
 .coeur {
   position: relative;
-  height: 30px;
-  width: 30px;
-  right: 13px;
-  top: -3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 60px;
+  height: 45px;
+  width: 45px;
 }
 
 .coeur .fas {
@@ -78,6 +85,28 @@ header .img img {
 
 .coeur:hover .far {
   z-index: -1;
+}
+
+@-webkit-keyframes mk {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes mk {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 .plat_deux {

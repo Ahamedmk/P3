@@ -36,10 +36,12 @@ header{
 
 .coeur{
     position: relative;   
-    height: 30px;
-    width: 30px;
-    right: 13px;
-    top:-3px;
+    display: flex;
+    align-content: center;
+    align-items: center; 
+    padding-right: 60px;
+    height: 45px;
+    width: 45px;
    
      .fas{
         position: absolute;
@@ -61,6 +63,15 @@ header{
            z-index: -1;
        }
    }
+}
+@keyframes mk {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .plat_deux{
