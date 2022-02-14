@@ -1,17 +1,54 @@
+ $color-background:#eaeaea;
+ $color-header:#ffffff;
+ $color-tertiaire:#99E2D0;
+ $vardelay:0.4s;
+ $color-gradient:-webkit-linear-gradient(-90deg, rgba(172,124,240,1) 0%, rgba(241,114,247,1) 80%);
+ $color-gradient-boutton:linear-gradient(0deg, rgba(172,124,240,1) 0%, rgba(241,114,247,1) 97%);
+  @mixin flex-grow {
+     display: flex;
+     flex-grow: 1;
+     justify-content: center;
+ }
+ @mixin flex-between {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+ @mixin flex-text-align {
+     display:flex;
+     text-align: center;
+     align-items: center;
+ }
+ @mixin flex-center {
+    display: flex;
+     justify-content: center;
+     align-items: center;    
+ }
+ @mixin box-shadow {
+     -webkit-box-shadow: 0px 6px 7px 3px rgba(0,0,0,0.2); 
+     box-shadow: 0px 6px 7px 3px rgba(0,0,0,0.2);   
+ }
+ @mixin text-overflow {
+     text-overflow: ellipsis;
+     overflow: hidden;
+     white-space: nowrap;
+ }
+
+
 *, ::before, ::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body{
-    background-color:#eaeaea;
+    background-color:$color-background;
     font-family: 'Roboto', sans-serif;
 }
 
 header{
     -webkit-box-shadow: 0px 4px 6px 1px rgba(0,0,0,0.25); 
     box-shadow: 0px 4px 6px 1px rgba(0,0,0,0.25);
-    background-color: #ffffff;
+    background-color: $color-header;
 .img {
     display: flex;
     align-items: center;
@@ -22,10 +59,7 @@ header{
 }
 }
 .myfood {
-  display: flex;
-  flex-grow: 1;
-  justify-content: center;
-
+  @include flex-grow;
 }
 .lien_title{
     color: black;
@@ -37,7 +71,7 @@ header{
 .coeur{
     position: relative;   
     display: flex;
-    align-content: center;
+    // align-content: center;
     align-items: center; 
     padding-right: 60px;
     height: 45px;
@@ -46,7 +80,7 @@ header{
      .fas{
         position: absolute;
         z-index: -1;
-       background: -webkit-linear-gradient(-90deg, rgba(172,124,240,1) 0%, rgba(241,114,247,1) 80%);
+       background: $color-gradient;
        -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
        }
@@ -86,9 +120,7 @@ header{
     margin: 10px 0 40px 0;
     background: #eaeaea;
 .title{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-between;
      font-family: 'Shrikhand', cursive;
     padding: 40px 0 20px 0;
     }
@@ -128,8 +160,7 @@ h2 {
     justify-content: space-evenly;
     background: white;
     border-radius: 15px;
-    -webkit-box-shadow: 0px 6px 7px 3px rgba(0,0,0,0.2); 
-        box-shadow: 0px 6px 7px 3px rgba(0,0,0,0.2);
+    @include box-shadow;
     margin-bottom: 15px; 
     overflow: hidden;
     
@@ -147,26 +178,19 @@ h2 {
 .tartare_poulpe{
     width: 100%;
      padding:15px;
-     
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+     @include text-overflow;
 }
 .validate{
-    display:flex;
-    text-align: center;
-    align-items: center;
-    color: #99E2D0;
-    background:#99E2D0 ;
+    @include flex-text-align;
+    color: $color-tertiaire;
+    background:$color-tertiaire ;
     border-radius: 0 15px 15px 0;
     padding: 20px;
     border: 1px solid;  
     }
     
     .check{
-        display:flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center;
         width: 30px;
         height: 30px;
         border-radius: 50%;
@@ -196,9 +220,7 @@ h2 {
     }
   }
 button {
-    display: flex;
-    justify-content: center;
-    text-align: center;
+    @include flex-center;
     border: transparent;
     width: 15rem;
     border-radius: 30px;
@@ -209,9 +231,8 @@ button {
     padding: 20px 0;
     text-align: center;
     cursor: pointer;
-    background: linear-gradient(0deg, rgba(172,124,240,1) 0%, rgba(241,114,247,1) 97%);
-    -webkit-box-shadow: 0px 6px 7px 3px rgba(0,0,0,0.2); 
-    box-shadow: 0px 6px 7px 3px rgba(0,0,0,0.2);
+    background: $color-gradient-boutton;
+    @include box-shadow;
 }
 
 a {
@@ -239,18 +260,13 @@ li{
     list-style-type:none;
 }
 h3{   
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+    @include text-overflow;
     a{
         color: black;
     }
 }
 .accompagnement{
-    
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+    @include text-overflow;
 }
 .price{
     display: flex;
@@ -258,7 +274,7 @@ h3{
      transition: transform 0.5s;
 }
 
-$vardelay:0.4s;
+
 
 @for $i from 1 through 10 {
   .anim-#{$i} {

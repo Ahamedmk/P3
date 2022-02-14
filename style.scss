@@ -2,9 +2,9 @@ $color-background:#eaeaea;
 $color-background-loader:whitesmoke;
 $color-header:#ffffff;
 $color-title:#faf9f9;
-$color-violet:#9356DC;
+$color-primary:#9356DC;
 $color-icon:#97a8af;
-$color-nouveau:#99E2D0;
+$color-tertiaire:#99E2D0;
 $color-green:#3a866f;
 $color-finale:#332e2c;
 $color-gradient:-webkit-linear-gradient(-90deg, rgba(172,124,240,1) 0%, rgba(241,114,247,1) 80%);
@@ -177,7 +177,7 @@ header{
             position: absolute;
             @include flex-center;
             border-radius: 50%;
-            background-color: $color-violet;
+            background-color: $color-primary;
             color: white;
             left: -12px;
             width: 25px;
@@ -190,9 +190,9 @@ header{
             margin: 0 30px 0 40px;
         }
         &:hover {
-            background:lighten($color-violet,35%);
+            background:lighten($color-primary,35%);
             .icon_fonct{
-                color: $color-violet;
+                color: $color-primary;
             }
         }
     }
@@ -231,7 +231,7 @@ header{
     .card_repas {
         position: relative;
         div { 
-          background-color: $color-nouveau;       
+          background-color: $color-tertiaire;       
           position: absolute;
         right: 10px;
           font-size: 15px;
