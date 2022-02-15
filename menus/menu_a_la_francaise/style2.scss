@@ -33,6 +33,17 @@
      overflow: hidden;
      white-space: nowrap;
  }
+ $breakpoints: (
+    // "phone-down": 500px,
+    "tablet-pc": 768px,
+    "tablet-down": 900px,
+    "desktop-up": 1024px
+);
+@mixin media-min($_key) {
+    @media screen and (min-width: map-get($breakpoints, $_key)) {
+         @content; 
+    }
+}
 
 
 *, ::before, ::after {
@@ -149,6 +160,11 @@ h2 {
 }
 .entree{
     padding-bottom: 20px;
+    @include media-min("tablet-pc"){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 .euro {
     font-weight: bold;
@@ -163,7 +179,10 @@ h2 {
     @include box-shadow;
     margin-bottom: 15px; 
     overflow: hidden;
-    
+    @include media-min("tablet-pc"){
+        width: 80%;
+    }
+
     &:hover {
         cursor: pointer;
         .price{
@@ -250,6 +269,10 @@ a {
 .final{
     background-color: #332e2c;
     height: 200px;
+    @include media-min("tablet-pc") {
+        font-size: 1.5rem;
+        height: 220px;
+    }
 }
 .icon_footer {
     font-size: 10px;
