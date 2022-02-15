@@ -289,6 +289,12 @@ header .img img {
   margin-bottom: 60px;
 }
 
+@media (min-width: 768px) {
+  .repas {
+    width: 268px;
+  }
+}
+
 .repas .img_rest {
   width: 100%;
   height: 193px;
@@ -415,5 +421,15 @@ li {
 
 h3 a {
   color: black;
+}
+
+@media (min-width: 768px) {
+  .repas-finale {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 /*# sourceMappingURL=style.css.map */

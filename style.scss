@@ -215,11 +215,15 @@ header{
         background-color: white;
         border-radius: 10px 10px 10px 10px;
         margin-bottom: 60px;
+        @media (min-width: 768px) {
+            width: 268px;
+             }
             .img_rest{
                 width: 100%;
                 height: 193px;
                 object-fit: cover;
                 border-radius: 10px 10px 0 0;
+                
             
         }
             a {
@@ -314,3 +318,10 @@ header{
             color: black;
         }
     }
+
+   .repas-finale{
+    @media (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        }
+   }
