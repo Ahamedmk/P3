@@ -464,4 +464,10 @@ h3 a {
             justify-content: space-evenly;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .list {
+    text-align: center;
+  }
+}
 /*# sourceMappingURL=style.css.map */

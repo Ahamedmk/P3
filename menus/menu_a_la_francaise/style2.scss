@@ -1,50 +1,13 @@
- $color-background:#eaeaea;
- $color-header:#ffffff;
- $color-tertiaire:#99E2D0;
- $vardelay:0.4s;
- $color-gradient:-webkit-linear-gradient(-90deg, rgba(172,124,240,1) 0%, rgba(241,114,247,1) 80%);
- $color-gradient-boutton:linear-gradient(0deg, rgba(172,124,240,1) 0%, rgba(241,114,247,1) 97%);
-  @mixin flex-grow {
-     display: flex;
-     flex-grow: 1;
-     justify-content: center;
- }
- @mixin flex-between {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
- }
- @mixin flex-text-align {
-     display:flex;
-     text-align: center;
-     align-items: center;
- }
- @mixin flex-center {
-    display: flex;
-     justify-content: center;
-     align-items: center;    
- }
- @mixin box-shadow {
-     -webkit-box-shadow: 0px 6px 7px 3px rgba(0,0,0,0.2); 
-     box-shadow: 0px 6px 7px 3px rgba(0,0,0,0.2);   
- }
- @mixin text-overflow {
-     text-overflow: ellipsis;
-     overflow: hidden;
-     white-space: nowrap;
- }
+
  $breakpoints: (
     // "phone-down": 500px,
     "tablet-pc": 768px,
     "tablet-down": 900px,
     "desktop-up": 1024px
 );
-@mixin media-min($_key) {
-    @media screen and (min-width: map-get($breakpoints, $_key)) {
-         @content; 
-    }
-}
 
+@import "../../utils/variables";
+@import "../../utils/mixins";
 
 *, ::before, ::after {
     margin: 0;
@@ -82,7 +45,6 @@ header{
 .coeur{
     position: relative;   
     display: flex;
-    // align-content: center;
     align-items: center; 
     padding-right: 60px;
     height: 45px;
@@ -304,4 +266,9 @@ h3{
       // animation-delay: $vardelay*$i;
       animation: myAnim $vardelay*$i ease 0s 1 normal both;
   }
+}
+.list {
+    @include media-min("tablet-pc") {
+ text-align: center;    
+}
 }

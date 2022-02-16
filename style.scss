@@ -1,40 +1,12 @@
-$color-background:#eaeaea;
-$color-background-loader:whitesmoke;
-$color-header:#ffffff;
-$color-title:#faf9f9;
-$color-primary:#9356DC;
-$color-icon:#97a8af;
-$color-tertiaire:#99E2D0;
-$color-green:#3a866f;
-$color-finale:#332e2c;
-$color-gradient:-webkit-linear-gradient(-90deg, rgba(172,124,240,1) 0%, rgba(241,114,247,1) 80%);
-$color-gradient-boutton:linear-gradient(0deg, rgba(172,124,240,1) 0%, rgba(241,114,247,1) 97%);
-@mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-}
-@mixin flex-between {
-    display: flex;
-        justify-content: space-between;
-        align-items: center;
-}
-@mixin color-icon-gradient {
-    -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-}
+
 $breakpoints: (
     // "phone-down": 500px,
     "tablet-pc": 768px,
     "tablet-down": 900px,
-    "desktop-up": 1024px
+    "desktop-up": 1024px,
 );
-@mixin media-min($_key) {
-    @media screen and (min-width: map-get($breakpoints, $_key)) {
-         @content; 
-    }
-}
-
+@import "./utils/variables";
+@import "./utils/mixins";
 
 *, ::before, ::after {
     margin: 0;
@@ -352,3 +324,8 @@ header{
         justify-content: space-evenly;
         }
    }
+    .list {
+        @include media-min("tablet-pc") {
+     text-align: center;    
+ }
+}
