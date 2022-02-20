@@ -1,6 +1,5 @@
 
  $breakpoints: (
-    // "phone-down": 500px,
     "tablet-pc": 768px,
     "tablet-down": 900px,
     "desktop-up": 1024px
@@ -154,6 +153,11 @@ h2 {
         .check{
             animation: 0.5s 0s 1 both turn  ;
         }
+        .validate{
+            @include flex-text-align;
+            animation:10s 0 0 both trans;
+            width:60px;   
+        }
     }   
 
 .tartare_poulpe{
@@ -162,20 +166,21 @@ h2 {
      @include text-overflow;
 }
 .validate{
-    @include flex-text-align;
+     @include flex-center;
     color: $color-tertiaire;
     background:$color-tertiaire ;
     border-radius: 0 15px 15px 0;
-    padding: 20px;
-    border: 1px solid;  
+    width: 0;
+    transition: width 0.5s;
+    overflow: hidden;
     }
-    
     .check{
         @include flex-center;
         width: 30px;
         height: 30px;
         border-radius: 50%;
-        border: 1px solid;background: white;       
+        border: 1px solid;background: white; 
+        overflow: hidden;      
     }    
 }
 
@@ -214,6 +219,14 @@ button {
     cursor: pointer;
     background: $color-gradient-boutton;
     @include box-shadow;
+}
+@keyframes trans{
+    from{
+        opacity:1;
+    }
+    to{
+        opacity:1;
+    }
 }
 
 a {
@@ -255,7 +268,6 @@ h3{
 }
 .price{
     display: flex;
-    transform: translateX(77px);
      transition: transform 0.5s;
 }
 
@@ -263,7 +275,6 @@ h3{
 
 @for $i from 1 through 10 {
   .anim-#{$i} {
-      // animation-delay: $vardelay*$i;
       animation: myAnim $vardelay*$i ease 0s 1 normal both;
   }
 }
